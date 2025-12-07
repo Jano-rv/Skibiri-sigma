@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Skibiri Sigma Website</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../resources/skibiri_logo.png" />
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main>
+      <div class="titulo">
+        <h1>SKIBIRI TOILET RIZZ SIGMA GYATT</h1>
+      </div>
+      <div class="countdown-container">
+        <div id="countdown"></div>
+      </div>
+
+      <script>
+        const targetDate = new Date("2026-07-14 00:00:00").getTime();
+
+        const countdown = document.getElementById("countdown");
+
+        function updateCountdown() {
+          const now = new Date().getTime();
+          const distance = targetDate - now;
+
+          if (distance <= 0) {
+            countdown.innerHTML = "a carnivorearse";
+            clearInterval(interval);
+            return;
+          }
+
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          const minutes = Math.floor(
+            (distance % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        const interval = setInterval(updateCountdown, 1000);
+        updateCountdown();
+      </script>
+    </main>
+  </body>
+</html>

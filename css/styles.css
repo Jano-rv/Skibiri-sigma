@@ -1,0 +1,76 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --red: hsl(0, 100%, 50%);
+}
+
+@font-face {
+  font-family: "wanted";
+  src: url("../resources/WantedM54.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  position: relative;
+}
+
+.titulo {
+  display: flex;
+  justify-content: center;
+}
+
+.titulo h1 {
+  position: relative;
+  padding: 0.6vw 1vw 0.05vw 1vw;
+
+  border-style: solid;
+  border-color: transparent;
+  border-width: clamp(0.1rem, 2vw, 0.75rem);
+  border-image-source: url(../resources/podrio.png);
+  border-image-slice: 20;
+  border-image-repeat: round;
+
+  font-size: clamp(1rem, 5vw, 4rem);
+  font-family: "wanted", sans-serif;
+  font-weight: 400;
+
+  background-image: url(../resources/podrio.png);
+  background-size: cover;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+#countdown {
+  font-family: "wanted", sans-serif;
+  font-size: clamp(0rem, 11vw, 13rem);
+  color: var(--red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40rem;
+  background: url(../resources/podrio.png);
+  background-size: contain;
+  background-color: red;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  background: url(../resources/background.png) center center no-repeat;
+  background-size: clamp(0rem, 100vw, 100rem);
+}
